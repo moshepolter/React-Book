@@ -33,10 +33,17 @@ export default class App extends React.Component{
           {this.state.userName}`s To Do List
           ({this.state.todoItems.filter(t => !t.done).length} item(s) to do)
         </h4>
-      <button className="btn btn-primary m-2" 
-        onClick={this.creatNewTodo}>
-        Add
-      </button>
+      <div className="container-fluid">
+        <div className="my-1">
+          <input className="form-control"
+          value={this.state.newItemText}
+          onChange={this.updateNewTextValue} />
+        <button className="btn btn-primary m-2" 
+          onClick={this.creatNewTodo}>
+          Add
+        </button>
+        </div>
+      </div>
     </div>
     )
   }
